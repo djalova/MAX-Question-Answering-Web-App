@@ -68,7 +68,7 @@ def get_subtitles(data, titles, title):
         return final
 
 
-@app.route("/", methods=["POST", "GET"])
+@app.route("/", methods=["POST", "GET", "HEAD"])
 def chat():
     if request.method == "POST":
         '''Process an ongoing conversation.'''
