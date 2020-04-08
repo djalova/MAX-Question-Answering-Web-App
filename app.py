@@ -87,7 +87,7 @@ def chat():
         response, new_state, matches = get_next_text(model_endpoint, input_text, narrowed_titles)
         return jsonify({"response": response, "state": new_state, "matches": matches})
 
-    elif request.method == "GET":
+    else:
         '''Start a conversation.'''
         return render_template("index.html", display_text=get_opening_message(), state=1)
 
